@@ -28,22 +28,33 @@ if ($conn->connect_error) {
 
    // get the variables from the URL request string
 
-   $studentid = $_REQUEST['studentid'];
 
-   $firstname = $_REQUEST['firstname'];
+    $studentid = $_REQUEST['Acct_no'];
 
-   $lastname = $_REQUEST['lastname'];
+    $firstname = $_REQUEST['firstname'];
 
-   $address = $_REQUEST['address'];
+    $lastname = $_REQUEST['lastname'];
+
+    $address = $_REQUEST['address'];
 
     $email = $_REQUEST['email'];
 
     $phone = $_REQUEST['phone'];
 
-    
+    $Balance = $_REQUEST['Balance'];
 
-   $sql = "INSERT INTO student (studentid, firstname, lastname, address, email, phone)
-VALUES ('$studentid', '$firstname', '$lastname', '$address', '$email', '$phone')";
+    $Date = $_REQUEST['Date'];
+
+    $TRansID = $_REQUEST['TRansID'];
+
+    $interest_rate = $_REQUEST['interest_rate'];
+
+    $total_amount = $_REQUEST['total_amount'];
+
+      
+
+    $sql = "INSERT INTO Investment (Acct_no, firstname, lastname, address, email, phone, Balance, Date, TRansID, interest_rate, total_amount)
+VALUES ('$Acct_no', '$firstname', '$lastname', '$address', '$email', '$phone', '$Balance', '$Date', '$TRansID', '$interest_rate', '$total_amount')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

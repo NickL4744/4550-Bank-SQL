@@ -81,11 +81,14 @@ span.psw {
 <div class="imgcontainer">
   
   </div>
-<center><h2>CSE 4550 Insert Student Form</h2>
+<center><h2>Insert Investment Form</h2>
 
-<form name="save registration" method="post" action="saveinsertstudent.php">
+<form name="save registration" method="post" action="saveinsertinvestments.php">
   
   <div class="container">
+    <label><b>Account Number</b></label>
+    <input type="text" placeholder="Enter Account Number" name="Acct_no" required="">
+
     <label><b>First Name</b></label>
     <input type="text" placeholder="Enter First Name" name="firstname" required="">
 
@@ -101,8 +104,20 @@ span.psw {
   <label><b>Phone</b></label>
     <input type="text" placeholder="Enter Phone" name="phone" required="">
               
-  <label><b>studentid</b></label>
-    <input type="text" placeholder="Enter studentid" name="studentid" required="">
+  <label><b>Balance</b></label>
+    <input type="text" placeholder="Enter Balance" name="Balance" required="">
+
+    <label><b>Date</b></label>
+    <input type="text" placeholder="Enter Date" name="Date" required="">
+
+    <label><b>TransactionID</b></label>
+    <input type="text" placeholder="TransactionID" name="TRansID" required="">
+
+    <label><b>Interest Rate</b></label>
+    <input type="text" placeholder="Interest Rate" name="interest_rate" required="">
+
+    <label><b>Total Amount</b></label>
+    <input type="text" placeholder="Total Amount" name="total_amount" required="">
   
             
     <button type="submit">submit</button>
