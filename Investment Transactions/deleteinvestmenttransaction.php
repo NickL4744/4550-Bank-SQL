@@ -6,7 +6,7 @@ $username = "quickme1_4211";
 $password = "csci4211";
 $dbname = "dbvpny1qngaxgp";
 
-$studentid = $_REQUEST['studentid'];
+$transid = $_REQUEST['transid'];
 
 
 // Create connection
@@ -18,7 +18,7 @@ if ($conn->connect_error) {
    
  
 
- $sql = "DELETE FROM student WHERE studentid=$studentid";
+ $sql = "DELETE FROM investment_transactions WHERE transid=$transid";
   
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";

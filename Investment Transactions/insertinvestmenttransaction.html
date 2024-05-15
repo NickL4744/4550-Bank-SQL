@@ -81,28 +81,31 @@ span.psw {
 <div class="imgcontainer">
   
   </div>
-<center><h2>CSE 4550 Insert Student Form</h2>
+<center><h2>Investment Transactions Form</h2>
 
-<form name="save registration" method="post" action="saveinsertstudent.php">
+<form name="save registration" method="post" action="saveinsertinvestmenttransaction.php">
   
   <div class="container">
-    <label><b>First Name</b></label>
+    <label><b>Transaction ID</b></label>
+    <input type="text" placeholder="Enter Transaction ID" name="transid" required="">
+
+    <label><b>Transaction Type</b></label>
+    <input type="text" placeholder="Enter Transaction Type" name="trans_type" required="">
+
+ <label><b>Transaction Date</b></label>
+    <input type="text" placeholder="Transaction Date" name="trans_date" required="">
+
+<label><b>Transaction Amount</b></label>
+    <input type="text" placeholder="Enter Transaction Amount" name="trans_amount" required="">
+        
+  <label><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastname" required="">
+              
+  <label><b>First Name</b></label>
     <input type="text" placeholder="Enter First Name" name="firstname" required="">
 
-    <label><b>Last Name</b></label>
-    <input type="text" placeholder="Enter Last Name" name="lastname" required="">
-
- <label><b>Address</b></label>
-    <input type="text" placeholder="Enter Address" name="address" required="">
-
-<label><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required="">
-        
   <label><b>Phone</b></label>
-    <input type="text" placeholder="Enter Phone" name="phone" required="">
-              
-  <label><b>studentid</b></label>
-    <input type="text" placeholder="Enter studentid" name="studentid" required="">
+  <input type="text" placeholder="Phone" name="phone" required="">
   
             
     <button type="submit">submit</button>
