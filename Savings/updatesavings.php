@@ -1,4 +1,4 @@
-<p>Update Student Address</p>
+<p>Update Savings Balance</p>
 
 <?php
 
@@ -17,12 +17,12 @@ if ($conn->connect_error) {
 } 
  
     
-$studentid = $_REQUEST['studentid'];
+$Acct_no = $_REQUEST['Acct_no'];
 
-   $address = $_REQUEST['address'];
+   $balance = $_REQUEST['balance'];
 
 
-$sql = "UPDATE student SET address='$address' WHERE studentid='$studentid'";
+$sql = "UPDATE savings SET balance='$balance' WHERE Acct_no='$Acct_no'";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record updated successfully";

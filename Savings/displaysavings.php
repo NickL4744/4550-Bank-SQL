@@ -20,13 +20,16 @@ if ($conn->connect_error) {
  
   
   
-  $sql = "SELECT *  FROM student";
+  $sql = "SELECT *  FROM savings";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["studentid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    echo "Account Number: " . $row["Acct_no"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. 
+    "Address: " . $row["address"]. "Email: " . $row["email"]. "Phone Number: " . $row["phone"]. "Balance: " . $row["Balance"].
+     "Date: " . $row["Date"]. "TransactionID: " . $row["TRansID"]. "Interest Rate: " . $row["interest_rate"]. 
+     "Total Amount: " . $row["total_amount"]. "<br>";
   }
 } else {
   echo "0 results";

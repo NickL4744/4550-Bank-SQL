@@ -28,7 +28,8 @@ if ($conn->connect_error) {
 
    // get the variables from the URL request string
 
-   $studentid = $_REQUEST['studentid'];
+
+   $Acct_no = $_REQUEST['Acct_no'];
 
    $firstname = $_REQUEST['firstname'];
 
@@ -36,14 +37,24 @@ if ($conn->connect_error) {
 
    $address = $_REQUEST['address'];
 
-    $email = $_REQUEST['email'];
+   $email = $_REQUEST['email'];
 
-    $phone = $_REQUEST['phone'];
+   $phone = $_REQUEST['phone'];
+
+   $Balance = $_REQUEST['Balance'];
+
+   $Date = $_REQUEST['Date'];
+
+   $TRansID = $_REQUEST['TRansID'];
+
+   $interest_rate = $_REQUEST['interest_rate'];
+
+   $total_amount = $_REQUEST['total_amount'];
 
     
 
-   $sql = "INSERT INTO student (studentid, firstname, lastname, address, email, phone)
-VALUES ('$studentid', '$firstname', '$lastname', '$address', '$email', '$phone')";
+   $sql = "INSERT INTO savings (Acct_no, firstname, lastname, address, email, phone, Balance, Date, TRansID, interest_rate, total_amount)
+VALUES ('$Acct_no', '$firstname', '$lastname', '$address', '$email', '$phone', '$Balance', '$Date', '$TRansID', '$interest_rate', '$total_amount')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

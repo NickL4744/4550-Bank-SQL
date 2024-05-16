@@ -15,18 +15,19 @@ if ($conn->connect_error) {
  
   
  
-$studentid = $_REQUEST['studentid'];
+$transid = $_REQUEST['transid'];
 
    
 
-$sql = "SELECT * FROM `student` WHERE `studentid` LIKE '%$studentid'";
+$sql = "SELECT * FROM `savings_transactions` WHERE `transid` LIKE '%$transid'";
 $result = $conn->query($sql);
 
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["studentid"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    echo "Transaction ID: " . $row["transid"]. "Transaction Type: " . $row["trans_type"]. "Transaction Date: " . $row["trans_date"]. 
+    "Transaction Amount: " . $row["trans_amount"]. "Last Name: " . $row["lastname"]. "First Name: " . $row["firstname"]. "Phone: " . $row["Phone"]. "<br>";
   }
 } else {
   echo "0 results";
