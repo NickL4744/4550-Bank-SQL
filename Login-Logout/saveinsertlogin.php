@@ -29,32 +29,30 @@ if ($conn->connect_error) {
    // get the variables from the URL request string
 
 
-    $Acct_no = $_REQUEST['Acct_no'];
+    $userid = $_REQUEST['userid'];
 
-    $firstname = $_REQUEST['firstname'];
+    $pssword = $_REQUEST['pssword'];
 
     $lastname = $_REQUEST['lastname'];
 
-    $address = $_REQUEST['address'];
+    $firstname = $_REQUEST['firstname'];
 
-    $email = $_REQUEST['email'];
+    $address = $_REQUEST['address'];
 
     $phone = $_REQUEST['phone'];
 
-    $Balance = $_REQUEST['Balance'];
+    $email = $_REQUEST['email'];
 
-    $Date = $_REQUEST['Date'];
+    $Testquestion = $_REQUEST['Testquestion'];
 
-    $TRansID = $_REQUEST['TRansID'];
+    $Testanswer = $_REQUEST['Testanswer'];
 
-    $interest_rate = $_REQUEST['interest_rate'];
-
-    $total_amount = $_REQUEST['total_amount'];
+    $usertype = $_REQUEST['usertype'];
 
       
 
-    $sql = "INSERT INTO Investment (Acct_no, firstname, lastname, address, email, phone, Balance, Date, TRansID, interest_rate, total_amount)
-VALUES ('$Acct_no', '$firstname', '$lastname', '$address', '$email', '$phone', '$Balance', '$Date', '$TRansID', '$interest_rate', '$total_amount')";
+    $sql = "INSERT INTO login_tbl (userid, pssword, lastname, firstname, address, phone, email, Testquestion, Testanswer, usertype)
+VALUES ('$userid', '$pssword', '$lastname', '$firstname', '$address', '$phone', '$email', '$Testquestion', '$Testanswer', '$usertype')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
